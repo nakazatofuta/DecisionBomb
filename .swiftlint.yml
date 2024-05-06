@@ -1,0 +1,51 @@
+included:
+- DecisionBomb/
+
+# 無効にするルール
+disabled_rules:
+# コード記載のない改行を許可するため
+- trailing_whitespace
+- type_body_length
+
+# デフォルト無効のルールのうち、有効にするもの
+opt_in_rules:
+- empty_string
+- empty_collection_literal
+- force_unwrapping
+- conditional_returns_on_newline
+
+# 1行の文字列制限
+line_length:
+- 200   # warning
+- 300   # error
+
+# 型の行数制限
+type_body_length:
+- 400   # warning
+- 600   # error
+
+# 1ファイルの行数制限
+file_length:
+- 500   # warning
+- 1000  # error
+
+# メソッドの行数制限
+function_body_length:
+- 100   # warning
+- 200   # error
+
+type_name:
+min_length: 3
+max_length:
+warning: 40
+error: 50
+excluded:
+
+# 変数名に関する制約
+identifier_name:
+min_length: # only min_length
+error: 2 # only error
+excluded: # excluded via string array
+- uid
+- URL
+reporter: "xcode"

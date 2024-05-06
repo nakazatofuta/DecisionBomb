@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CBB96D0E2BE8A9B900286B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB96D0D2BE8A9B900286B4A /* AppDelegate.swift */; };
-		CBB96D102BE8A9B900286B4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB96D0F2BE8A9B900286B4A /* SceneDelegate.swift */; };
 		CBB96D122BE8A9B900286B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB96D112BE8A9B900286B4A /* ViewController.swift */; };
 		CBB96D152BE8A9B900286B4A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CBB96D142BE8A9B900286B4A /* Base */; };
 		CBB96D172BE8A9BA00286B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB96D162BE8A9BA00286B4A /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		CBB96D0A2BE8A9B900286B4A /* DecisionBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB96D0D2BE8A9B900286B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBB96D0F2BE8A9B900286B4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CBB96D112BE8A9B900286B4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBB96D142BE8A9B900286B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB96D162BE8A9BA00286B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				CBB96D0D2BE8A9B900286B4A /* AppDelegate.swift */,
-				CBB96D0F2BE8A9B900286B4A /* SceneDelegate.swift */,
 				CBB96D112BE8A9B900286B4A /* ViewController.swift */,
 				CBB96D132BE8A9B900286B4A /* Main.storyboard */,
 				CBB96D162BE8A9BA00286B4A /* Assets.xcassets */,
@@ -77,6 +74,7 @@
 				CBB96D062BE8A9B900286B4A /* Sources */,
 				CBB96D072BE8A9B900286B4A /* Frameworks */,
 				CBB96D082BE8A9B900286B4A /* Resources */,
+				CBB96D212BE8C00500286B4A /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -133,6 +131,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CBB96D212BE8C00500286B4A /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d /opt/homebrew/bin; then\n    PATH=/opt/homebrew/bin/:$PATH\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CBB96D062BE8A9B900286B4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +159,6 @@
 			files = (
 				CBB96D122BE8A9B900286B4A /* ViewController.swift in Sources */,
 				CBB96D0E2BE8A9B900286B4A /* AppDelegate.swift in Sources */,
-				CBB96D102BE8A9B900286B4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGN6VU2329;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DecisionBomb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -321,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGN6VU2329;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DecisionBomb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
