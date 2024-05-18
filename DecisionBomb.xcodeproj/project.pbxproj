@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB434F8B2BF87F4D0088421F /* BombViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB434F8A2BF87F4D0088421F /* BombViewController.swift */; };
+		CB434F8D2BF87F600088421F /* BombViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB434F8C2BF87F600088421F /* BombViewController.storyboard */; };
 		CB9EC4EC2BF09A6E00F9FD5D /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9EC4EA2BF09A6D00F9FD5D /* Corporate-Logo-Medium-ver3.otf */; };
 		CB9EC4ED2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9EC4EB2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf */; };
 		CBB96D0E2BE8A9B900286B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB96D0D2BE8A9B900286B4A /* AppDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB434F8A2BF87F4D0088421F /* BombViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombViewController.swift; sourceTree = "<group>"; };
+		CB434F8C2BF87F600088421F /* BombViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BombViewController.storyboard; sourceTree = "<group>"; };
 		CB9EC4EA2BF09A6D00F9FD5D /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
 		CB9EC4EB2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
 		CBB96D0A2BE8A9B900286B4A /* DecisionBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +77,8 @@
 			children = (
 				CBFB8EA02BF08CE100A9CDB7 /* TopViewController.swift */,
 				CBFB8EA22BF08CF700A9CDB7 /* TopViewController.storyboard */,
+				CB434F8A2BF87F4D0088421F /* BombViewController.swift */,
+				CB434F8C2BF87F600088421F /* BombViewController.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				CBB96D172BE8A9BA00286B4A /* Assets.xcassets in Resources */,
 				CBFB8EA32BF08CF700A9CDB7 /* TopViewController.storyboard in Resources */,
 				CB9EC4EC2BF09A6E00F9FD5D /* Corporate-Logo-Medium-ver3.otf in Resources */,
+				CB434F8D2BF87F600088421F /* BombViewController.storyboard in Resources */,
 				CBB96D1A2BE8A9BA00286B4A /* Base in Resources */,
 				CB9EC4ED2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf in Resources */,
 			);
@@ -181,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB434F8B2BF87F4D0088421F /* BombViewController.swift in Sources */,
 				CBFB8EA12BF08CE100A9CDB7 /* TopViewController.swift in Sources */,
 				CBB96D0E2BE8A9B900286B4A /* AppDelegate.swift in Sources */,
 			);
