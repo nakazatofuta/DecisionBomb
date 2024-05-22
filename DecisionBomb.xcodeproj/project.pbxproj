@@ -11,6 +11,10 @@
 		CB434F8D2BF87F600088421F /* BombViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB434F8C2BF87F600088421F /* BombViewController.storyboard */; };
 		CB434F8F2BF88D040088421F /* UsageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB434F8E2BF88D040088421F /* UsageViewController.storyboard */; };
 		CB434F912BF88D150088421F /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB434F902BF88D150088421F /* UsageViewController.swift */; };
+		CB434F972BF9C8330088421F /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB434F942BF9C8330088421F /* start.mp3 */; };
+		CB434F982BF9C8330088421F /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB434F952BF9C8330088421F /* bomb.mp3 */; };
+		CB434F992BF9C8330088421F /* safe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB434F962BF9C8330088421F /* safe.mp3 */; };
+		CB434F9C2BFBA7480088421F /* push.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB434F9B2BFBA7480088421F /* push.mp3 */; };
 		CB9EC4EC2BF09A6E00F9FD5D /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9EC4EA2BF09A6D00F9FD5D /* Corporate-Logo-Medium-ver3.otf */; };
 		CB9EC4ED2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9EC4EB2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf */; };
 		CBB96D0E2BE8A9B900286B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB96D0D2BE8A9B900286B4A /* AppDelegate.swift */; };
@@ -25,6 +29,10 @@
 		CB434F8C2BF87F600088421F /* BombViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BombViewController.storyboard; sourceTree = "<group>"; };
 		CB434F8E2BF88D040088421F /* UsageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsageViewController.storyboard; sourceTree = "<group>"; };
 		CB434F902BF88D150088421F /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewController.swift; sourceTree = "<group>"; };
+		CB434F942BF9C8330088421F /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		CB434F952BF9C8330088421F /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
+		CB434F962BF9C8330088421F /* safe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = safe.mp3; sourceTree = "<group>"; };
+		CB434F9B2BFBA7480088421F /* push.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = push.mp3; sourceTree = "<group>"; };
 		CB9EC4EA2BF09A6D00F9FD5D /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
 		CB9EC4EB2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
 		CBB96D0A2BE8A9B900286B4A /* DecisionBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB434F9A2BF9C93C0088421F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CB434F952BF9C8330088421F /* bomb.mp3 */,
+				CB434F9B2BFBA7480088421F /* push.mp3 */,
+				CB434F962BF9C8330088421F /* safe.mp3 */,
+				CB434F942BF9C8330088421F /* start.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		CBB96D012BE8A9B900286B4A = {
 			isa = PBXGroup;
 			children = (
@@ -66,17 +85,18 @@
 		CBB96D0C2BE8A9B900286B4A /* DecisionBomb */ = {
 			isa = PBXGroup;
 			children = (
-				CBFB8E9F2BF08CC100A9CDB7 /* ViewController */,
+				CBFB8E9F2BF08CC100A9CDB7 /* ViewControllers */,
 				CBB96D0D2BE8A9B900286B4A /* AppDelegate.swift */,
 				CBB96D182BE8A9BA00286B4A /* LaunchScreen.storyboard */,
 				CBB96D162BE8A9BA00286B4A /* Assets.xcassets */,
-				CBFB8EA42BF08E6E00A9CDB7 /* Font */,
+				CB434F9A2BF9C93C0088421F /* Sounds */,
+				CBFB8EA42BF08E6E00A9CDB7 /* Fonts */,
 				CBB96D1B2BE8A9BA00286B4A /* Info.plist */,
 			);
 			path = DecisionBomb;
 			sourceTree = "<group>";
 		};
-		CBFB8E9F2BF08CC100A9CDB7 /* ViewController */ = {
+		CBFB8E9F2BF08CC100A9CDB7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				CB434F8A2BF87F4D0088421F /* BombViewController.swift */,
@@ -86,16 +106,16 @@
 				CB434F902BF88D150088421F /* UsageViewController.swift */,
 				CB434F8E2BF88D040088421F /* UsageViewController.storyboard */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		CBFB8EA42BF08E6E00A9CDB7 /* Font */ = {
+		CBFB8EA42BF08E6E00A9CDB7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				CB9EC4EB2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf */,
 				CB9EC4EA2BF09A6D00F9FD5D /* Corporate-Logo-Medium-ver3.otf */,
 			);
-			path = Font;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,11 +178,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB96D172BE8A9BA00286B4A /* Assets.xcassets in Resources */,
+				CB434F992BF9C8330088421F /* safe.mp3 in Resources */,
 				CBFB8EA32BF08CF700A9CDB7 /* TopViewController.storyboard in Resources */,
+				CB434F982BF9C8330088421F /* bomb.mp3 in Resources */,
 				CB434F8F2BF88D040088421F /* UsageViewController.storyboard in Resources */,
 				CB9EC4EC2BF09A6E00F9FD5D /* Corporate-Logo-Medium-ver3.otf in Resources */,
 				CB434F8D2BF87F600088421F /* BombViewController.storyboard in Resources */,
+				CB434F972BF9C8330088421F /* start.mp3 in Resources */,
 				CBB96D1A2BE8A9BA00286B4A /* Base in Resources */,
+				CB434F9C2BFBA7480088421F /* push.mp3 in Resources */,
 				CB9EC4ED2BF09A6E00F9FD5D /* Corporate-Logo-Bold-ver3.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,8 +374,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TopViewController;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,8 +404,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TopViewController;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

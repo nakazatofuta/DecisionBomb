@@ -12,11 +12,14 @@ class TopViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var usageButton: UIButton!
 
+    var startSound: AVAudioPlayer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackBarButton()
         startButton.layer.cornerRadius = 16
         usageButton.layer.cornerRadius = 16
+        startSound = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "start", ofType: "mp3")!))
     }
 
     func setBackBarButton() {
@@ -25,7 +28,14 @@ class TopViewController: UIViewController {
         navigationItem.backBarButtonItem = backItem
     }
 
+    func playStartSound() {
+        startSound.stop()
+        startSound.currentTime = 0
+        startSound.play()
+    }
+
     @IBAction func didTapStartButton(_ sender: Any) {
+        playStartSound()
         let storyboard = UIStoryboard(name: "BombViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "BombViewController")
         // 遷移
