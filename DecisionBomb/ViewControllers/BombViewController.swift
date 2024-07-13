@@ -11,12 +11,15 @@ import UIKit
 
 class BombViewController: UIViewController {
     @IBOutlet var buttonImage: [UIImageView]!
-    @IBOutlet weak var safeLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var explosionImageView: UIImageView!
+    @IBOutlet weak var restartButton: UIButton!
 
     var bombButtonImage: UIImageView?
     var safeSound: AVAudioPlayer!
     var bombSound: AVAudioPlayer!
     var pushSound: AVAudioPlayer!
+    var explosionImageArray: [UIImage] = []
 
     var vibrationTimer: Timer?
     var shortVibrationCount = 0
@@ -26,6 +29,11 @@ class BombViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        restartButton.layer.cornerRadius = 16
+
+        while let explosionImage = UIImage(named: "explosion\(explosionImageArray.count + 1)") {
+            explosionImageArray.append(explosionImage)
+        }
         // 爆弾をランダムで決定
         guard let bomb = buttonImage.randomElement() else {
             return
@@ -45,7 +53,8 @@ class BombViewController: UIViewController {
             buttonImage.isUserInteractionEnabled = true
             buttonImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped)))
         }
-        safeLabel.alpha = 0
+        resultLabel.alpha = 0
+        restartButton.alpha = 0
     }
 
     func startVibration() {
@@ -105,23 +114,54 @@ class BombViewController: UIViewController {
         view.isUserInteractionEnabled = false
         if tappedButtonImage.tag == bombButtonImage?.tag {
             DispatchQueue.main.asyncAfter(deadline: .now() + randomWaitTime) {
+                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
                 self.playBombSound()
+                // アニメーションの適用
+                self.explosionImageView.animationImages = self.explosionImageArray
+                // 1.2秒間隔
+                self.explosionImageView.animationDuration = 1.2
+                // 1回繰り返し
+                self.explosionImageView.animationRepeatCount = 1
+                // アニメーションを開始
+                self.explosionImageView.startAnimating()
+                self.explosionImageView.image = UIImage(named: "explosion10")
+            }
+            UIView.animate(withDuration: 0.8, delay: randomWaitTime, options: .curveEaseIn) {
+                self.resultLabel.text = "OUT"
+                self.resultLabel.textColor = UIColor.black
+                self.resultLabel.alpha = 1
+                self.restartButton.alpha = 1
+            } completion: { _ in
+                self.view.isUserInteractionEnabled = true
+                // View内のすべてのサブビューに対して処理を行う
+                for subview in self.view.subviews {
+                    subview.isUserInteractionEnabled = false
+                    // サブビューがUIButtonであり、かつ特定のボタンでない場合
+                    if let button = subview as? UIButton, button == self.restartButton {
+                        // isUserInteractionEnabledプロパティをfalseに設定する
+                        subview.isUserInteractionEnabled = true
+                    }
+                }
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + randomWaitTime) {
                 self.playSafeSound()
             }
             UIView.animate(withDuration: 0.8, delay: randomWaitTime, options: .curveEaseIn) {
-                self.safeLabel.alpha = 1
+                self.resultLabel.alpha = 1
 
             } completion: { _ in
                 UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseIn) {
-                    self.safeLabel.alpha = 0
+                    self.resultLabel.alpha = 0
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     self.view.isUserInteractionEnabled = true
                 }
             }
         }
+    }
+
+    @IBAction func didTapRestartButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

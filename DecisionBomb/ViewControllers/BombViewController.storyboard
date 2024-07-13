@@ -270,12 +270,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-ey-DOm">
+                                <rect key="frame" x="-229.66666666666666" y="0.0" width="852.33333333333337" height="852"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ngx-ey-DOm" secondAttribute="height" multiplier="1:1" id="2hh-xY-m85"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpF-xr-vvC">
                                 <rect key="frame" x="24" y="378" width="345" height="96"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SAFE">
                                         <attributes>
-                                            <color key="NSColor" red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="0.90066225165562919" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="96" name="Corporate-Logo-Bold-ver3"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -283,21 +289,52 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKD-RH-J5A">
+                                <rect key="frame" x="24" y="698" width="345" height="72"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.3411764706" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="xKl-Xs-Nkb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="やりなおす">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="40" name="Corporate-Logo-Medium-ver3"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapRestartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aVP-q2-z0U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.1960784314" green="0.2156862745" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ngx-ey-DOm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="19X-rK-MoA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WKD-RH-J5A" secondAttribute="bottom" constant="48" id="4fZ-Pv-3dJ"/>
+                            <constraint firstItem="Ngx-ey-DOm" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Bho-pt-fAV"/>
                             <constraint firstItem="hpF-xr-vvC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="EVV-Yp-QJk"/>
+                            <constraint firstAttribute="bottom" secondItem="Ngx-ey-DOm" secondAttribute="bottom" id="FyA-zW-bZc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WKD-RH-J5A" secondAttribute="trailing" constant="24" id="MCJ-ii-FE6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hpF-xr-vvC" secondAttribute="trailing" constant="24" id="MxW-he-7pD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WWg-HR-0k5" secondAttribute="trailing" constant="24" id="Oxo-iR-tO1"/>
                             <constraint firstItem="WWg-HR-0k5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="QJO-wX-6uk"/>
                             <constraint firstItem="WWg-HR-0k5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="SuR-B1-sOO"/>
+                            <constraint firstItem="WKD-RH-J5A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="YjB-EM-EyZ"/>
                             <constraint firstItem="hpF-xr-vvC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="obX-Mu-l3c"/>
                             <constraint firstItem="hpF-xr-vvC" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="u9O-5f-Pke"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="safeLabel" destination="hpF-xr-vvC" id="DsN-Pr-tWt"/>
+                        <outlet property="explosionImageView" destination="Ngx-ey-DOm" id="k9R-y2-Bdf"/>
+                        <outlet property="restartButton" destination="WKD-RH-J5A" id="HVG-2Z-QFE"/>
+                        <outlet property="resultLabel" destination="hpF-xr-vvC" id="DsN-Pr-tWt"/>
                         <outletCollection property="buttonImage" destination="34W-sN-us6" collectionClass="NSMutableArray" id="cMg-6N-L2e"/>
                         <outletCollection property="buttonImage" destination="CWD-gi-JDn" collectionClass="NSMutableArray" id="x9b-Ye-b5k"/>
                         <outletCollection property="buttonImage" destination="tqz-9W-hww" collectionClass="NSMutableArray" id="XkE-dT-zgz"/>
@@ -317,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="4"/>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
